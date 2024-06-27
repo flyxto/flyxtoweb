@@ -7,7 +7,7 @@ const WhatWeDo = () => {
 
     <div className='flex-col justify-center my-40'>
       <p className='text-center gradient-text text-4xl mb-8 font-semibold'>What We Do</p>
-      <div className="grid md:grid-cols-4 grid-cols-1 gap-5">
+      <div className="grid md:grid-cols-4 grid-cols-1 md:gap-5">
         <RoundCard
           title="Web Applications"
           description="Transforming your web concepts into interactive, user-centric dependable experiences."

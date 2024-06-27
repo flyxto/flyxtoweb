@@ -13,13 +13,13 @@
   flex-direction: column;
   color: #fff;
   overflow: hidden;
-  transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition for background and box-shadow */
-  box-shadow: 0 0 10px rgba(129, 129, 129, 0.5); /* Initial shadow with no opacity */
+  transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  box-shadow: 0 0 10px rgba(129, 129, 129, 0.5);
 }
 
 .card2:hover {
   background: radial-gradient(circle 280px at 75% 0%, #ff2f2f, #3a0022);
-  box-shadow: 0 0 20px rgba(129, 129, 129, 0.9); /* Increased glow effect on hover */
+  box-shadow: 0 0 20px rgba(129, 129, 129, 0.9);
 }
 
 .card2 .text2 {
@@ -27,13 +27,13 @@
   background: linear-gradient(45deg, #b4b4b4 4%, #fff, #b4b4b4);
   background-clip: text;
   color: transparent;
-  transition: opacity 0.3s ease-in-out; /* Smooth transition for text */
+  transition: opacity 0.3s ease-in-out;
 }
 
 .card2 .overlay-content {
   opacity: 0;
   position: absolute;
-  transition: opacity 0.5s ease-in-out; /* Smooth transition for overlay */
+  transition: opacity 0.5s ease-in-out;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -41,17 +41,11 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  background-color: rgba(0, 0, 0, 0.5);
   color: white;
 }
 
-.card2:hover .text2 {
-  opacity: 0; /* Hide text when hovered */
-}
 
-.card2:hover .overlay-content {
-  opacity: 1; /* Show overlay when hovered */
-}
 
 .outer2 {
   width: 300px;
@@ -131,13 +125,27 @@
   }
 }
 
-.card2:hover .ray2 {
+.maincard:hover .ray2 {
   animation: smoothHoverRay 0.3s forwards;
 }
 
-.card2:not(:hover) .ray2 {
+.maincard:not(:hover) .ray2 {
   animation: smoothUnHoverRay 0.3s forwards;
 }
+
+.maincard:hover .text2 {
+  opacity: 0;
+}
+
+.maincard:hover .overlay-content {
+  opacity: 1;
+}
+
+/* .maincard:hover .card2{
+  background: radial-gradient(circle 280px at 75% 0%, #ff2f2f, #3a0022);
+  box-shadow: 0 0 20px rgba(129, 129, 129, 0.9);
+} */
+
 
 .line2 {
   width: 100%;
@@ -167,3 +175,15 @@
   width: 1px;
   height: 100%;
 }
+
+.reflection {
+  margin-top: 20px; /* Adjust the space between the card and its reflection */
+  transform: scaleY(-1);
+  opacity: 0.5; /* Adjust the opacity to make it look like a reflection */
+  position: relative;
+}
+
+.reflection-card {
+  background: radial-gradient(circle 280px at 100% 0%, #ff2f2f, #3a0022); /* Same background as card2 */
+}
+
