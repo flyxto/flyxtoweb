@@ -14,10 +14,10 @@ const Header = () => {
 
         </div>
         <div>
-          <p class="gradient-text text-[20px] text-center mt-[25px] prevent-select">Partner with our visionary team of experts to transform your <br />digital product dreams into reality.</p>
+          <p class="gradient-text md:text-[20px] text-[16px] text-center mt-[25px] prevent-select">Partner with our visionary team of experts to transform your <br />digital product dreams into reality.</p>
         </div>
-        <div className='flex justify-center md:pt-20 pt-20'>
-          <button className="button">
+        <div className='flex justify-center md:pt-20 pt-16'>
+          <button className="button md:scale-100 scale-90">
             <div className="blob1"></div>
             <div className="blob2"></div>
             <div className="inner ">
