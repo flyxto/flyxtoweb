@@ -9,7 +9,7 @@ const Navbar = () => {
   return (
     <header className="w-full  shadow-sm ">
       <div className="container mx-auto flex h-16 max-w-7xl items-center  justify-center px-4 md:px-6">
-        <div className="flex items-center py-2 px-8 bg-gray-400 rounded-full bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-20 shadow-slate-400 shadow-inner mt-8">
+        <div className="flex items-center py-2 px-8 bg-gray-800 rounded-full bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-20 shadow-slate-400 shadow-inner mt-8">
           <Link href="#" className="text-lg font-bold pr-16" prefetch={false}>
             <Image
               src={Logo}
