@@ -1,0 +1,189 @@
+.card2 {
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  border: solid 0px #202222;
+  background-size: 20px 20px;
+  background: radial-gradient(circle 280px at 100% 0%, #ff2f2f, #3a0022);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex-direction: column;
+  color: #fff;
+  overflow: hidden;
+  transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  box-shadow: 0 0 10px rgba(129, 129, 129, 0.5);
+}
+
+.card2:hover {
+  background: radial-gradient(circle 280px at 75% 0%, #ff2f2f, #3a0022);
+  box-shadow: 0 0 20px rgba(129, 129, 129, 0.9);
+}
+
+.card2 .text2 {
+  font-weight: bolder;
+  background: linear-gradient(45deg, #b4b4b4 4%, #fff, #b4b4b4);
+  background-clip: text;
+  color: transparent;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.card2 .overlay-content {
+  opacity: 0;
+  position: absolute;
+  transition: opacity 0.5s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+
+
+.outer2 {
+  width: 300px;
+  height: 300px;
+  border-radius: 100%;
+  padding: 1px;
+  background: radial-gradient(circle 230px at 0% 100%, #ffffff, #0c0d0d);
+  position: relative;
+}
+
+.dot2 {
+  width: 5px;
+  aspect-ratio: 1;
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0 0 10px #ffffff;
+  border-radius: 100px;
+  z-index: 2;
+  right: 10%;
+  top: 10%;
+  animation: moveDot 6s linear infinite;
+}
+
+@keyframes moveDot {
+  0%,
+  100% {
+    top: 10%;
+    right: 10%;
+  }
+  25% {
+    top: 10%;
+    right: calc(100% - 35px);
+  }
+  50% {
+    top: calc(100% - 30px);
+    right: calc(100% - 35px);
+  }
+  75% {
+    top: calc(100% - 30px);
+    right: 10%;
+  }
+}
+
+.ray2 {
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  position: absolute;
+  background-color: #ffcfe6;
+  opacity: 0.4;
+  box-shadow: 0 0 50px #fff;
+  filter: blur(30px);
+  transform-origin: 10%;
+  top: 0;
+  right: 0;
+  transform: rotate(0deg);
+  z-index: 1;
+}
+
+@keyframes smoothHoverRay {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(-80deg);
+  }
+}
+
+@keyframes smoothUnHoverRay {
+  0% {
+    transform: rotate(-80deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.maincard:hover .ray2 {
+  animation: smoothHoverRay 0.3s forwards;
+}
+
+.maincard:not(:hover) .ray2 {
+  animation: smoothUnHoverRay 0.3s forwards;
+}
+
+.maincard:hover .text2 {
+  opacity: 0;
+}
+
+.maincard:hover .overlay-content {
+  opacity: 1;
+}
+
+/* .maincard:hover .card2{
+  background: radial-gradient(circle 280px at 75% 0%, #ff2f2f, #3a0022);
+  box-shadow: 0 0 20px rgba(129, 129, 129, 0.9);
+} */
+
+
+.line2 {
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  background-color: #2c2c2c;
+}
+
+.topl2 {
+  top: 10%;
+  background: linear-gradient(90deg, #888888 30%, #1d1f1f 70%);
+}
+
+.bottoml2 {
+  bottom: 10%;
+}
+
+.leftl2 {
+  left: 10%;
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(180deg, #747474 30%, #222424 70%);
+}
+
+.rightl2 {
+  right: 10%;
+  width: 1px;
+  height: 100%;
+}
+
+.reflection {
+  margin-top: 20px; /* Adjust the space between the card and its reflection */
+  transform: scaleY(-1);
+  opacity: 0.5; /* Adjust the opacity to make it look like a reflection */
+  position: relative;
+}
+
+.reflection-card {
+  background: radial-gradient(circle 280px at 100% 0%, #ff2f2f, #3a0022); /* Same background as card2 */
+}
+
