@@ -7,8 +7,9 @@ const Home = () => {
   return (
     <Container>
       <Header/>
-      <WhatWeDo/>
       <Techstack/>
+      <WhatWeDo/>
+
     </Container>
   );
 }

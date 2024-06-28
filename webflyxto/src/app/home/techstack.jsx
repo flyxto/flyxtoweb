@@ -4,7 +4,7 @@ import ReactLogo from '../../assets/reactlogo.svg';  // Update the path to your 
 
 const Techstack = () => {
   return (
-    <div className=" grid md:grid-cols-2 grid-cols-1 md:py-40">
+    <div className=" grid md:grid-cols-2 grid-cols-1 md:pt-40 md:mt-40">
       <div className=' flex justify-center'>
         <div className="circle2 md:scale-100 scale-75">
           <div className='ray4'></div>
