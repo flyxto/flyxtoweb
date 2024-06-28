@@ -1,0 +1,97 @@
+/* techstack.css */
+.circle2 {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.center-icon {
+  position: absolute;
+}
+
+.tech-icon {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+}
+
+.techlogos{
+  border-radius: 100%;
+  overflow: hidden;
+  border-width: 2px;
+  transition: scale 0.3s ease;
+  background: rgba( 255, 255, 255, 0.25 );
+  box-shadow: 0 0px 32px 0 rgba(104, 113, 243, 0.5);
+  backdrop-filter: blur( 3px );
+  -webkit-backdrop-filter: blur( 3px );
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+
+.techlogos:hover{
+  scale: 105%;
+}
+
+.react { top: 0%; left: 50%; transform: translate(-50%, -50%); }
+.tailwind { top: 25%; right: 5%; transform: translate(50%, -50%); }
+.wordpress { bottom: 25%; right: 5%; transform: translate(50%, 50%); }
+.mysql { bottom: 0%; left: 50%; transform: translate(-50%, 50%); }
+.aws { bottom: 25%; left: 5%; transform: translate(-50%, 50%); }
+.laravel { top: 25%; left: 5%; transform: translate(-50%, -50%); }
+.middleIcon { top: 50%; left: 50%; transform: translate(-50%, -50%);
+  text-shadow:0px 0px 2px #fff,0px 0px 2px #432f8f;
+ }
+
+
+.ray3 {
+  width: 50px;
+  height: 20px;
+  border-radius: 100px;
+  position: absolute;
+  background-color: #ffffff;
+  opacity: 1;
+  box-shadow: 0 0 50px #fff;
+  filter: blur(20px);
+  transform-origin: 10%;
+  top: 0;
+  left: 0;
+  transform: rotate(0deg);
+  z-index: 1;
+}
+
+.ray4 {
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  position: absolute;
+  background-color: rgba(243, 104, 183, 0.5);
+  opacity: 1;
+  box-shadow: 0 0 50px #ffffff;
+  filter: blur(50px);
+  transform-origin: 10%;
+  top: 80px;
+  left: 130px;
+  transform: rotate(0deg);
+  z-index: -1;
+  animation: swayRay2 5s ease-in-out infinite;
+}
+
+@keyframes swayRay2 {
+  0% {
+    transform: rotate(0deg);
+    width:100px;
+  }
+  50% {
+    transform: rotate(50deg);
+    width: 150px;
+  }
+  100% {
+    transform: rotate(0deg);
+    width: 100px;
+  }
+}
