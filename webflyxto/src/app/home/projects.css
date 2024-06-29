@@ -1,0 +1,139 @@
+.project-info {
+  padding: 100px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  position: relative;
+  top: -50px;
+}
+
+
+.project-title {
+  font-weight: 500;
+  font-size: 1.5em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: rgb(255, 255, 255);
+}
+
+.lighter {
+  font-size: 0.9em;
+}
+
+
+.tag {
+  font-weight: lighter;
+  color: rgb(255, 255, 255);
+}
+
+/*DELETE THIS TWO LINE*/
+.delete {
+  background-color: #b2b2fd;
+}
+
+.card-img div {
+  width: 90%;
+}
+/*IF USING IMAGES*/
+
+.card5 {
+  background-color: rgba(38, 8, 8,0.25);
+  
+  color: rgb(255, 255, 255);
+  width: 300px;
+  max-height: 330px;
+  border-radius: 8px;
+  box-shadow: rgba(255, 107, 107, 0.25) 0px 50px 100px -20px,
+    rgba(74, 0, 0, 0.3) 0px 30px 60px -30px;
+
+}
+
+.card-img {
+  position: relative;
+  top: -20px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* Change the .card-img div to .card-img img to use img*/
+.card-img a,
+.card-img div {
+  height: 150px;
+  width: 90%;
+  /* Change this width here to change the width of the color/image */
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.card-imgs {
+  transition: all 0.5s;
+  filter: brightness(1);
+
+background-color: #ffffff;
+}
+
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Adjust spacing between cards as needed */
+  justify-content: center; /* Center the cards horizontally */
+  padding: 20px;
+}
+
+/* Other existing CSS styles */
+
+
+.card-content {
+  flex-direction: column;
+  background-image: radial-gradient(
+    rgba(255, 255, 255, 0.2) 1px, 
+    transparent 1px
+  );
+  background-size: 1.1rem 1.1rem;
+  height: 360px;
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(10px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.project-type {
+  background: radial-gradient(circle 30px at 80% 25%, #615110, #837023);
+  color: rgb(224, 224, 224);
+  font-weight: normal;
+  padding: 0.3em 0.7em;
+  border-radius: 15px;
+  font-size: 12px;
+  letter-spacing: -0.6px
+}
+.types {
+  gap: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  place-content: flex-start;
+}
+
+.project-hover {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  z-index: 1;
+  opacity: 0;
+
+}
+
+.card5:hover .project-hover {
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  opacity: 1;
+
+}
+
+.card5:hover .card-imgs {
+  filter: brightness(0.2);
+}

@@ -26,7 +26,7 @@ const Header = () => {
           </button>
         </div>
         <div className="md:pt-36 pt-20">
-          <p className='text-center text-lg gradient-text mb-4'>Our Expertise</p>
+          <p className='text-center text-lg gradient-text mb-4'>Trusted By</p>
           <LogoSlider />
         </div>
       </div>
