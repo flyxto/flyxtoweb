@@ -73,6 +73,7 @@
 @layer base {
   * {
     @apply border-border;
+    
   }
   body {
     @apply bg-background text-foreground;
@@ -81,6 +82,7 @@
 
 body{
   font-family: 'Montserrat', Courier, monospace;
+
 }
 
 .gradient-text {
