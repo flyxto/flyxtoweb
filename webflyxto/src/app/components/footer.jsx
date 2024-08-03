@@ -6,7 +6,7 @@ import "./stars.css"
 const Footer = () => {
   return (
     <div>
-      <footer className="footer-sec overflow-clip">
+      <footer className="footer-sec overflow-clip shadow-2xl shadow-white">
         <div className="main">
           <div className="logo row">
             <div className="footer-header">

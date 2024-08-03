@@ -1,6 +1,6 @@
 footer{
   color: #fff;
-  background-image: linear-gradient(0deg, #0F0A0A 0%, #A72838 200%);
+  background-image: radial-gradient(ellipse at bottom, #3b101a 0%, #0f0909 100%);
   position: relative;
   width: 100%;
   height: 100%;
@@ -38,10 +38,6 @@ footer{
 	
 }
 
-
-
-
-
 @media (max-width:660px){
   .main{
     gap:10px;
@@ -59,12 +55,6 @@ footer{
     grid-column: 1/4;
   }
 }
-
-
-
-
-
-
 
 .manik{
   width: 120px;
