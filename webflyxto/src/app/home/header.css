@@ -56,20 +56,19 @@
 
 .ray {
   width: 100%;
-  height: 200px;
+  height: 250px;
   border-radius: 100px;
   position: absolute;
   background-color: #D62F50;
   opacity: 0.4;
   box-shadow: 0 0 100px #6A054F;
-  filter: blur(100px);
+  filter: blur(50px);
   transform-origin: 50%;
   top: -50%;
   left: 0%;
   transform: rotate(40deg);
   animation: swayRay 5s ease-in-out infinite;
 }
-
 @media screen and (max-width: 640px) {
   .ray {
     animation: swayRay 0s;

@@ -6,8 +6,8 @@ const Header = () => {
   return (
     <Container>
       <div>
-        <div class="ray"></div>
-        <div className='md:mt-64 mt-40'>
+        <div className="ray"></div>
+        <div className='md:mt-56 mt-32'>
           <div>
             <div className="gradient-text md:text-6xl font-semibold text-3xl text-center">Build Software To Make Things Easier</div>
           </div>
