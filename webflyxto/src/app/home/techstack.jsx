@@ -57,7 +57,7 @@ const Techstack = () => {
             <motion.div variants={scaleUpVariants}
               initial="hidden"
               animate={isInView ? "visible" : "hidden"}
-              transition={{ delay: 0.1 }}>
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}>
               <Image src={ReactLogo} alt="React" width={100} height={100} />
             </motion.div>
           </div>
@@ -66,7 +66,7 @@ const Techstack = () => {
             <motion.div variants={scaleUpVariants}
               initial="hidden"
               animate={isInView ? "visible" : "hidden"}
-              transition={{ delay: 0.2 }}>
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}>
               <Image src={next} alt="Tailwind" width={100} height={100} />
             </motion.div>
           </div>
@@ -75,7 +75,7 @@ const Techstack = () => {
             <motion.div variants={scaleUpVariants}
               initial="hidden"
               animate={isInView ? "visible" : "hidden"}
-              transition={{ delay: 0.3 }}>
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}>
               <Image src={django} alt="WordPress" width={100} height={100} />
             </motion.div>
           </div>
@@ -84,7 +84,7 @@ const Techstack = () => {
             <motion.div variants={scaleUpVariants}
               initial="hidden"
               animate={isInView ? "visible" : "hidden"}
-              transition={{ delay: 0.4 }}>
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}>
               <Image src={flutter} alt="MySQL" width={100} height={100} />
             </motion.div>
           </div>
@@ -93,7 +93,7 @@ const Techstack = () => {
             <motion.div variants={scaleUpVariants}
               initial="hidden"
               animate={isInView ? "visible" : "hidden"}
-              transition={{ delay: 0.5 }}>
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.5 }}>
               <Image src={node} alt="AWS" width={100} height={100} />
             </motion.div>
           </div>
@@ -102,7 +102,7 @@ const Techstack = () => {
             <motion.div variants={scaleUpVariants}
               initial="hidden"
               animate={isInView ? "visible" : "hidden"}
-              transition={{ delay: 0.6 }}>
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}>
               <Image src={springboot} alt="Laravel" width={100} height={100} />
             </motion.div>
           </div>
@@ -110,7 +110,7 @@ const Techstack = () => {
             <motion.div variants={scaleUpVariants}
               initial="hidden"
               animate={isInView ? "visible" : "hidden"}
-              transition={{ delay: 0.7 }}>
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.7 }}>
               <p className='text-xl text-center scale-150'>Experts In</p>
             </motion.div>
           </div>
@@ -120,7 +120,7 @@ const Techstack = () => {
         <motion.div variants={moveUpVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
-          transition={{ duration: 1, ease: "easeOut", delay:0.9 }}>
+          transition={{ duration: 1, ease: "easeOut", delay: 0.8 }}>
           <div className='rounded-2xl overflow-hidden shadow-2xl shadow-slate-600'>
             <Vimeo
               video="347119375"
