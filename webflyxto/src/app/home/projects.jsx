@@ -1,7 +1,60 @@
+"use client";
+
+import React, { useRef, useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 import ProjectCard from './cards/projectcard';
 import MetaXPre from "../../assets/metaXPrev.png";
 
+const textVariants = {
+  hidden: { opacity: 0, y: -20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: (index) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: index * 0.2, // Stagger effect: increase delay for each card
+      duration: 0.6,
+    },
+  }),
+};
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1 },
+};
+
 const Projects = () => {
+  const [inView, setInView] = useState(false);
+  const containerRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setInView(true);
+          observer.unobserve(containerRef.current);
+        }
+      },
+      {
+        threshold: 0.1,
+      }
+    );
+
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
+    }
+
+    return () => {
+      if (containerRef.current) {
+        observer.unobserve(containerRef.current);
+      }
+    };
+  }, []);
+
   const projects = [
     {
       imageSrc: MetaXPre,
@@ -39,12 +92,32 @@ const Projects = () => {
 
   return (
     <div>
-      <p className='text-center gradient-text text-4xl mb-8 font-semibold'>Case Studies</p>
-      <div className="projects-container">
+      <motion.p
+        className='text-center gradient-text text-4xl mb-8 font-semibold'
+        variants={textVariants}
+        initial="hidden"
+        animate={inView ? "visible" : "hidden"}
+      >
+        Case Studies
+      </motion.p>
+      <motion.div
+        ref={containerRef}
+        className="projects-container"
+        variants={containerVariants}
+        initial="hidden"
+        animate={inView ? "visible" : "hidden"}
+        transition={{ duration: 0.6 }}
+      >
         {projects.map((project, index) => (
-          <ProjectCard key={index} {...project} />
+          <motion.div
+            key={index}
+            variants={cardVariants}
+            custom={index}
+          >
+            <ProjectCard {...project} />
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 };

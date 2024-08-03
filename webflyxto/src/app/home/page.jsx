@@ -3,6 +3,7 @@ import Container from '@/layout/container';
 import WhatWeDo from "./WhatWeDo";
 import Techstack from "./techstack";
 import Projects from "./projects";
+import Contact from "./contact";
 
 const Home = () => {
   return (
@@ -11,6 +12,7 @@ const Home = () => {
       <Techstack/>
       <WhatWeDo/>
       <Projects/>
+      <Contact/>
     </Container>
   );
 }
