@@ -13,12 +13,12 @@ const Header = () => {
           <div>
             <div className='h-14 absolute shine'></div>
             <motion.div
-              className="gradient-text md:text-6xl font-semibold text-3xl text-center"
+              className="gradient-text md:text-6xl font-medium text-3xl text-center"
               initial={{ opacity: 0, y: -50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1 }}
             >
-              Build Software To Make Things Easier
+              Build Software To Make Things Easier.
             </motion.div>
           </div>
         </div>
