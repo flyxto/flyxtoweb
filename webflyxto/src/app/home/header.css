@@ -54,40 +54,124 @@
   color: #fff;
 }
 
+
+
+/* Updated Header.module.css */
+
 .ray {
   width: 100%;
-  height: 200px;
-  border-radius: 100px;
+  height: 250px;
+  border-radius: 10px 20px 20px 10px;
   position: absolute;
   background-color: #D62F50;
   opacity: 0.4;
   box-shadow: 0 0 100px #6A054F;
-  filter: blur(100px);
+  filter: blur(50px);
   transform-origin: 50%;
-  top: -50%;
+  top: -40%;
   left: 0%;
   transform: rotate(40deg);
-  animation: swayRay 5s ease-in-out infinite;
+  animation: reveal 2s ease-in-out forwards, sway 4.5s ease-in-out infinite;
+}
+.shine{
+  transform: rotate(40deg);
+  animation: shinereveal 3s ease-in-out forwards, shineMove 5s ease-in-out infinite;
+  top: -15%;
+  background-color: #f7afc6;
+  /* visibility: hidden; */
+
+}
+
+@keyframes shineMove {
+  0% {
+    transform: rotate(40deg);
+    width: 900px;
+  }
+  50% {
+    transform: rotate(50deg);
+    width: 600px;
+  }
+  100% {
+    transform: rotate(40deg);
+    width: 900px;
+  }
+}
+@keyframes reveal {
+  0% {
+    width: 0;
+    opacity: 0;
+    filter: blur(100px);
+    transform: rotate(40deg);
+  }
+  100% {
+    width: 1000px;
+    opacity: 0.3;
+    filter: blur(50px);
+    transform: rotate(40deg);
+  }
+}
+
+@keyframes shinereveal {
+  0% {
+    width: 0;
+    opacity: 0;
+    filter: blur(200px);
+    transform: rotate(40deg);
+  }
+  100% {
+    width: 1000px;
+    opacity: 0.4;
+    filter: blur(50px);
+    transform: rotate(40deg);
+  }
+}
+
+
+@keyframes sway {
+  0% {
+    transform: rotate(40deg);
+    width: 1000px;
+  }
+  50% {
+    transform: rotate(50deg);
+    width: 800px;
+  }
+  100% {
+    transform: rotate(40deg);
+    width: 1000px;
+  }
 }
 
 @media screen and (max-width: 640px) {
   .ray {
     animation: swayRay 0s;
-    width: 100%;
+    width: 80%;
+  }
+  .shine {
+    visibility: hidden;
+    animation: shineMove 0s;
   }
 }
 
 @media screen and (max-width: 768px) {
   .ray {
     animation: swayRay 0s;
-    width: 100%;
+    width: 80%;
+  }
+  .shine {
+    visibility: hidden;
+    animation: shineMove 0s;
   }
 }
 
 @media screen and (max-width: 1024px) {
   .ray {
     animation: swayRay 0s;
-    width: 100%;
+    width: 80%;
+  }
+  .shine {
+    visibility: hidden;
+    animation: shineMove 0s;
   }
 }
 
@@ -139,3 +223,4 @@
   width: 1px;
   height: 100%;
 }
+
