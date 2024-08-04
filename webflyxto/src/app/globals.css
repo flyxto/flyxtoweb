@@ -102,6 +102,13 @@ body{
   padding-right: 40px;
 }
 
+/* Example for other components */
+.other-component {
+  position: relative;
+  z-index: 1; /* Lower z-index to stay behind WhyUs */
+}
+
+
 @media screen and (max-width: 640px) {
   .container-styles {
     padding-left: 10px;
@@ -240,4 +247,49 @@ body{
     padding: 1px;
     border-radius: 12px;
   }
+}
+
+.parallax-layer {
+  height: screen;
+  background-color: #0F0A0A;
+  position: relative; /* This will ensure it scrolls on top */
+  z-index: 3;
+}
+
+/* Ensure the header is fixed at the top */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  transition: opacity 0.5s ease, filter 1s ease; /* Smooth transition for opacity and blur */
+  height: 100px; /* Adjust based on your header height */
+
+}
+
+/* Apply blur effect */
+.header-blur {
+  filter: blur(5px); /* Adjust the blur amount as needed */
+}
+
+/* Reduce opacity to 0 */
+.header-transparent {
+  opacity: 0;
+}
+
+/* Ensure the WhyUs section scrolls on top of the header */
+.why-us {
+  position: relative;
+  z-index: 2;
+}
+
+.contactpart{
+  position: relative;
+  z-index: 3;
+}
+
+/* Container to add some spacing */
+.container {
+  padding-top: 100px; /* Adjust based on the header height */
 }
