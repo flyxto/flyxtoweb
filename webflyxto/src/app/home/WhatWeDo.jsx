@@ -56,9 +56,9 @@ const WhatWeDo = () => {
   }, []);
 
   return (
-    <div className='flex-col justify-center my-40'>
+    <div className='flex-col justify-center mt-40 mb-40'>
       <motion.p
-        className='text-center gradient-text text-4xl mb-8 font-semibold'
+        className='text-center gradient-text text-7xl mb-40 font-semibold'
         variants={textVariants}
         initial="hidden"
         animate={inView ? "visible" : "hidden"}

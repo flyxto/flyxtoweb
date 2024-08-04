@@ -1,17 +1,77 @@
+"use client";
+import { useEffect } from 'react';
+import { motion, useAnimation } from 'framer-motion';
 import './cards/talkButton.css';
 import './cards/socials.css';
 
 const Contact = () => {
+  const controlsP1 = useAnimation();
+  const controlsP2 = useAnimation();
+  const controlsButton = useAnimation();
+  const controlsSocials = useAnimation();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const elements = [
+        { el: document.querySelector('.text-7xl'), controls: controlsP1 },
+        { el: document.querySelector('.text-2xl'), controls: controlsP2 },
+        { el: document.querySelector('.button-cc'), controls: controlsButton },
+        { el: document.querySelector('.scale-75'), controls: controlsSocials },
+      ];
+
+      elements.forEach(({ el, controls }) => {
+        const rect = el.getBoundingClientRect();
+        const inView = rect.top < window.innerHeight && rect.bottom >= 0;
+        if (inView) {
+          controls.start({ opacity: 1, y: 0 });
+        } else {
+          controls.start({ opacity: 0, y: 50 });
+        }
+      });
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Initial check
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [controlsP1, controlsP2, controlsButton, controlsSocials]);
+
   return (
-    <div className="mt-40">
+    <div className="pt-56 pb-32">
       <div className="flex-col justify-center">
-        <p className="text-7xl text-center">Feels Great Right?</p>
-        <p className="text-2xl text-center mt-5">Let&apos;s talk about your project.</p>
+        <motion.p
+          className="text-7xl text-center"
+          initial={{ opacity: 0, y: 50 }}
+          animate={controlsP2}
+          transition={{ duration: 1, delay: 0.2 }}
+        >
+          Feels Great Right?
+        </motion.p>
+        <motion.p
+          className="text-2xl text-center mt-5"
+          initial={{ opacity: 0, y: 50 }}
+          animate={controlsP2}
+          transition={{ duration: 1, delay: 0.4 }}
+        >
+          Let&apos;s talk about your project.
+        </motion.p>
         <div className='flex justify-center mt-12'>
-          <button className='button-cc'>LET&apos;S TALK</button>
+          <motion.button
+            className='button-cc'
+            initial={{ opacity: 0, y: 10 }}
+            animate={controlsButton}
+            transition={{ duration: 0.8, delay: 0.5 }}
+          >
+            LET&apos;S TALK
+          </motion.button>
         </div>
       </div>
-      <div className='mt-12 flex justify-center scale-75'>
+      <motion.div
+        className='mt-12 flex justify-center scale-75'
+        initial={{ opacity: 0, y: 50 }}
+        animate={controlsSocials}
+        transition={{ duration: 1, delay: 0.4 }}
+      >
         {/* <!-- Twitter --> */}
         <div className="social-icon twitter-icon">
           <div className="social-icon-bloom"></div>
@@ -56,7 +116,7 @@ const Contact = () => {
             <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path>
           </svg>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

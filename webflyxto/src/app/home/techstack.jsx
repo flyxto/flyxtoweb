@@ -48,7 +48,7 @@ const Techstack = () => {
   }, []);
 
   return (
-    <div className="grid md:grid-cols-2 grid-cols-1 md:pt-40 md:mt-40" ref={sectionRef}>
+    <div className="grid md:grid-cols-2 grid-cols-1 md:pb-40 " ref={sectionRef}>
       <div className='flex justify-center'>
         <div className="circle2 md:scale-100 scale-75">
           <div className='ray4'></div>

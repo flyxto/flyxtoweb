@@ -99,7 +99,7 @@ const Footer = () => {
                   </svg>
                 </div>
 
-                
+
               </div>
             </div>
           </div>
@@ -108,7 +108,7 @@ const Footer = () => {
         <div id='stars2'></div>
         <div id='stars3'></div>
         <div className="copyright">
-          
+
           <p>© Copyright FLYXTO ASIA (PVT) LTD.</p>
         </div>
       </footer>
