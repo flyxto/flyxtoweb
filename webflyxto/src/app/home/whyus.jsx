@@ -33,7 +33,7 @@ const WhyUs = () => {
 
   return (
     <div>
-      <div className="h-screen flex-col items-center justify-center ">
+      <div className="md:h-screen flex-col items-center justify-center ">
         <motion.p
           ref={el => refs.current[0] = el}
           className="text-center text-7xl font-extralight gradient-text"

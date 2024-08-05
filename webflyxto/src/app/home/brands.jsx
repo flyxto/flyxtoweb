@@ -13,7 +13,7 @@ const Component = () => {
   return (
     <Slider
       width="200px"
-      duration={80}
+      duration={40}
       pauseOnHover={true}
       blurBorders={false}
       blurBoderColor={'#fff'}

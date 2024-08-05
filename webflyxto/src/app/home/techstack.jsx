@@ -116,12 +116,12 @@ const Techstack = () => {
           </div>
         </div>
       </div>
-      <div className='flex justify-center items-center'>
+      <div className='flex justify-center items-center md:overflow-visible overflow-hidden'>
         <motion.div variants={moveUpVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
           transition={{ duration: 1, ease: "easeOut", delay: 0.8 }}>
-          <div className='rounded-2xl overflow-hidden shadow-2xl shadow-slate-600'>
+          <div className='rounded-2xl overflow-hidden shadow-2xl shadow-slate-600 md:scale-100 scale-50'>
             <Vimeo
               video="347119375"
               autoplay

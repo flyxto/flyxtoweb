@@ -46,7 +46,7 @@ const Contact = () => {
   return (
     <div className="pt-56 pb-32">
       <div className="flex-col justify-center">
-        <div className='flex justify-evenly items-center mb-24'>
+        <div className='md:flex flex-1 justify-evenly items-center mb-24'>
           <div>
             <motion.p
               initial={{ opacity: 0, y: 50 }}
@@ -62,7 +62,7 @@ const Contact = () => {
             initial={{ opacity: 0, y: 50 }}
             animate={controlsP2}
             transition={{ duration: 1, delay: 0.1 }}>
-          <Testimonial />
+            <Testimonial />
           </motion.div >
         </div>
         <motion.p

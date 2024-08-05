@@ -8,22 +8,22 @@ import Techstack from "./techstack";
 import Projects from "./projects";
 import Contact from "./contact";
 import WhyUs from "./whyus";
+import HeaderMobile from './header mobile';
 
 const Home = () => {
- 
+
   return (
     <Container className="container">
-      <div className="header">
+      <div className="md:block hidden header">
         <Header />
       </div>
-      <div className='h-screen'></div>
-      <div className="why-us">
-        <Parallax
-          strength={500}
-          className=""
-        >
-          <WhyUs />
-        </Parallax>
+      <div className='hidden md:block h-screen'></div>
+      <div className="">
+        <div className='md:hidden block'>
+          <HeaderMobile />
+        </div>
+        <WhyUs />
+
       </div>
 
       <div className="parallax-layer h-auto">
@@ -32,7 +32,7 @@ const Home = () => {
         <Projects />
         <Contact />
       </div>
-      
+
     </Container>
   );
 }
