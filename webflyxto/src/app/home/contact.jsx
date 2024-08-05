@@ -1,8 +1,9 @@
 "use client";
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import './cards/talkButton.css';
 import './cards/socials.css';
+import { Testimonial } from '@/components/component/testimonial';
 
 const Contact = () => {
   const controlsP1 = useAnimation();
@@ -10,22 +11,28 @@ const Contact = () => {
   const controlsButton = useAnimation();
   const controlsSocials = useAnimation();
 
+  const [hasAnimated, setHasAnimated] = useState({
+    p1: false,
+    p2: false,
+    button: false,
+    socials: false,
+  });
+
   useEffect(() => {
     const handleScroll = () => {
       const elements = [
-        { el: document.querySelector('.text-7xl'), controls: controlsP1 },
-        { el: document.querySelector('.text-2xl'), controls: controlsP2 },
-        { el: document.querySelector('.button-cc'), controls: controlsButton },
-        { el: document.querySelector('.scale-75'), controls: controlsSocials },
+        { el: document.querySelector('.text-7xl'), controls: controlsP1, key: 'p1' },
+        { el: document.querySelector('.text-2xl'), controls: controlsP2, key: 'p2' },
+        { el: document.querySelector('.button-cc'), controls: controlsButton, key: 'button' },
+        { el: document.querySelector('.scale-75'), controls: controlsSocials, key: 'socials' },
       ];
 
-      elements.forEach(({ el, controls }) => {
+      elements.forEach(({ el, controls, key }) => {
         const rect = el.getBoundingClientRect();
         const inView = rect.top < window.innerHeight && rect.bottom >= 0;
-        if (inView) {
+        if (inView && !hasAnimated[key]) {
           controls.start({ opacity: 1, y: 0 });
-        } else {
-          controls.start({ opacity: 0, y: 50 });
+          setHasAnimated((prev) => ({ ...prev, [key]: true }));
         }
       });
     };
@@ -34,13 +41,32 @@ const Contact = () => {
     handleScroll(); // Initial check
 
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [controlsP1, controlsP2, controlsButton, controlsSocials]);
+  }, [controlsP1, controlsP2, controlsButton, controlsSocials, hasAnimated]);
 
   return (
     <div className="pt-56 pb-32">
       <div className="flex-col justify-center">
+        <div className='md:flex flex-1 justify-evenly items-center mb-24'>
+          <div>
+            <motion.p
+              initial={{ opacity: 0, y: 50 }}
+              animate={controlsP2}
+              transition={{ duration: 1, delay: 0.1 }}
+              className='text-5xl gradient-text font-semibold'>No Matter Your Industry,</motion.p>
+            <motion.p
+              initial={{ opacity: 0, y: 50 }}
+              animate={controlsP2}
+              transition={{ duration: 1, delay: 0.2 }} className='text-5xl gradient-text text-right'>Fear Not – Talk to Us.</motion.p>
+          </div>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={controlsP2}
+            transition={{ duration: 1, delay: 0.1 }}>
+            <Testimonial />
+          </motion.div >
+        </div>
         <motion.p
-          className="text-7xl text-center"
+          className="text-7xl text-center gradient-text"
           initial={{ opacity: 0, y: 50 }}
           animate={controlsP2}
           transition={{ duration: 1, delay: 0.2 }}

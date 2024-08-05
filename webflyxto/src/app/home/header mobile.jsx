@@ -5,7 +5,7 @@ import '@/app/home/header.css'; // Ensure this file includes the blur effect CSS
 import Container from '@/layout/container';
 import LogoSlider from './brands';
 
-const Header = () => {
+const HeaderMobile = () => {
   const [scrollY, setScrollY] = useState(0);
 
   const handleScroll = () => {
@@ -17,15 +17,12 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Calculate blur and opacity based on scrollY
-  const blurAmount = Math.min(scrollY / 50, 10); // Adjust divisor to control blur speed
-  const opacityAmount = Math.max(1 - scrollY / 1500, 0); // Adjust divisor to control opacity
 
   return (
     <Container>
       <div
         className="header-wrapper"
-        style={{ filter: `blur(${blurAmount}px)`, opacity: opacityAmount }}
+
       >
         <div>
           <div
@@ -92,4 +89,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default HeaderMobile;
