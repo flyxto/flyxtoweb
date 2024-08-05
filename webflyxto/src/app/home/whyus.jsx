@@ -36,12 +36,12 @@ const WhyUs = () => {
       <div className="h-screen flex-col items-center justify-center ">
         <motion.p
           ref={el => refs.current[0] = el}
-          className="text-center text-7xl font-thin gradient-text"
+          className="text-center text-7xl font-extralight gradient-text"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: isInView && hasAnimated ? 1 : 0, y: isInView && hasAnimated ? 0 : 50 }}
           transition={{ duration: 1, delay: 0.1 }}
         >
-          Why Us ?
+          We Offer Tech Therapy
         </motion.p>
         <motion.p
           ref={el => refs.current[1] = el}
@@ -50,7 +50,7 @@ const WhyUs = () => {
           animate={{ opacity: isInView && hasAnimated ? 1 : 0, y: isInView && hasAnimated ? 0 : 50 }}
           transition={{ duration: 1, delay: 0.5}}
         >
-          Because We Listen First
+          You Talk. We Listen.
         </motion.p>
         <motion.p
           ref={el => refs.current[2] = el}
@@ -59,7 +59,7 @@ const WhyUs = () => {
           animate={{ opacity: isInView && hasAnimated ? 1 : 0, y: isInView && hasAnimated ? 0 : 50 }}
           transition={{ duration: 1, delay: 0.7}}
         >
-          Then Solve
+          We Solve.
         </motion.p>
       </div>
     </div>

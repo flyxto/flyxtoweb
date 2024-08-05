@@ -5,6 +5,13 @@
   
 }
 
+@media (max-width: 768px) {
+  .header {
+    overflow: visible; /* Change overflow to visible on mobile view */
+  }
+}
+
+
 .nav {
   animation: revealCenter 1s forwards;
 }
