@@ -79,10 +79,10 @@ const Header = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 1.5 }}
           >
-            <p className='text-center text-lg gradient-text mb-4'>
+            <p className='text-center text-lg gradient-text'>
               Trusted By
             </p>
-            <div>
+            <div className='scale-90'>
               <LogoSlider />
             </div>
           </motion.div>

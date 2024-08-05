@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import './cards/talkButton.css';
 import './cards/socials.css';
+import { Testimonial } from '@/components/component/testimonial';
 
 const Contact = () => {
   const controlsP1 = useAnimation();
@@ -45,8 +46,27 @@ const Contact = () => {
   return (
     <div className="pt-56 pb-32">
       <div className="flex-col justify-center">
+        <div className='flex justify-evenly items-center mb-24'>
+          <div>
+            <motion.p
+              initial={{ opacity: 0, y: 50 }}
+              animate={controlsP2}
+              transition={{ duration: 1, delay: 0.1 }}
+              className='text-5xl gradient-text font-semibold'>No Matter Your Industry,</motion.p>
+            <motion.p
+              initial={{ opacity: 0, y: 50 }}
+              animate={controlsP2}
+              transition={{ duration: 1, delay: 0.2 }} className='text-5xl gradient-text text-right'>Fear Not – Talk to Us.</motion.p>
+          </div>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={controlsP2}
+            transition={{ duration: 1, delay: 0.1 }}>
+          <Testimonial />
+          </motion.div >
+        </div>
         <motion.p
-          className="text-7xl text-center"
+          className="text-7xl text-center gradient-text"
           initial={{ opacity: 0, y: 50 }}
           animate={controlsP2}
           transition={{ duration: 1, delay: 0.2 }}

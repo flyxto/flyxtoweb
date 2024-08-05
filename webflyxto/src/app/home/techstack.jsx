@@ -111,7 +111,7 @@ const Techstack = () => {
               initial="hidden"
               animate={isInView ? "visible" : "hidden"}
               transition={{ duration: 0.8, ease: "easeOut", delay: 0.7 }}>
-              <p className='text-xl text-center scale-150'>Experts In</p>
+              <p className='text-xl text-center scale-150'>Technical Mastery</p>
             </motion.div>
           </div>
         </div>

@@ -63,7 +63,7 @@ const WhatWeDo = () => {
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
       >
-        What We Do
+        What We Build
       </motion.p>
       <motion.div
         ref={containerRef}
@@ -73,15 +73,20 @@ const WhatWeDo = () => {
         animate={inView ? "visible" : "hidden"}
         transition={{ duration: 0.6 }}
       >
-        {["Web Applications", "Interactive Products", "AI Solutions", "Mobile Applications"].map((title, index) => (
+        {[
+          { title: "Web Applications", description: "Robust and scalable web applications tailored to your business needs." },
+          { title: "Interactive Products", description: "Engaging interactive products that enhance user experience." },
+          { title: "AI Solutions", description: "Cutting-edge AI solutions for smarter decision making." },
+          { title: "Mobile Applications", description: "Seamless and intuitive mobile applications for all platforms." },
+        ].map((item, index) => (
           <motion.div
-            key={title}
+            key={item.title}
             variants={cardVariants}
             custom={index}
           >
             <RoundCard
-              title={title}
-              description={`Description for ${title}`}
+              title={item.title}
+              description={item.description}
             />
           </motion.div>
         ))}
