@@ -19,7 +19,7 @@ const Header = () => {
 
   // Calculate blur and opacity based on scrollY
   const blurAmount = Math.min(scrollY / 50, 10); // Adjust divisor to control blur speed
-  const opacityAmount = Math.max(1 - scrollY / 1500, 0); // Adjust divisor to control opacity
+  const opacityAmount = Math.max(1 - scrollY / 1000, 0); // Adjust divisor to control opacity
 
   return (
     <Container>

@@ -1,0 +1,37 @@
+/* styles/Avatars.module.css */
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(var(--translateY, -20px));
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 1; /* Place avatars behind text */
+}
+
+.avatar {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  animation: float var(--duration, 4s) ease-in-out var(--delay, 0s) infinite;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  filter: blur(4px); /* Apply blur to the avatar images */
+}

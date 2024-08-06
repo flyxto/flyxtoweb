@@ -6,7 +6,7 @@ const RoundCard = ({ title, description }) => {
     <div className='flex justify-center maincard'>
       <div className="outer2 relative scale-75 md:scale-100">
         <div className="card2">
-          <div className="ray2"></div>
+          <div className=""></div>
           <div className="text2 text-3xl text-center mx-24">{title}</div>
           <div className="overlay-content flex-col px-8">
             <p className="text-center text-lg">{description}</p>
