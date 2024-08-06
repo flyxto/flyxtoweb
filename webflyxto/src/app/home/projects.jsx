@@ -92,16 +92,20 @@ const Projects = () => {
 
   return (
     <div className='pt-40'>
-      <motion.p
-        className='text-center gradient-text text-7xl mb-24 font-semibold'
-        variants={textVariants}
-        initial="hidden"
-        animate={inView ? "visible" : "hidden"}
-      >
-        Case Studies
-        <p className='text-center text-xl gradient-text'>See How We have Transformed Visions into Success</p>
-      </motion.p>
-      
+      <div>
+        <motion.p
+          className='text-center gradient-text text-7xl font-semibold'
+          variants={textVariants}
+          initial="hidden"
+          animate={inView ? "visible" : "hidden"}
+        >
+          Case Studies
+
+        </motion.p>
+        <motion.p variants={textVariants}
+          initial="hidden"
+          animate={inView ? "visible" : "hidden"} className='text-center text-xl gradient-text mb-24 '>See How We have Transformed Visions into Success</motion.p>
+      </div>
       <motion.div
         ref={containerRef}
         className="projects-container"
