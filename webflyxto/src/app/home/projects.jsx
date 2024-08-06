@@ -99,7 +99,7 @@ const Projects = () => {
         animate={inView ? "visible" : "hidden"}
       >
         Case Studies
-        <p className='text-center text-xl gradient-text'>See How We've Transformed Visions into Success</p>
+        <p className='text-center text-xl gradient-text'>See How We have Transformed Visions into Success</p>
       </motion.p>
       
       <motion.div
