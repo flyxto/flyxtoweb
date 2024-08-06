@@ -93,13 +93,15 @@ const Projects = () => {
   return (
     <div className='pt-40'>
       <motion.p
-        className='text-center gradient-text text-7xl mb-40 font-semibold'
+        className='text-center gradient-text text-7xl mb-24 font-semibold'
         variants={textVariants}
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
       >
         Case Studies
+        <p className='text-center text-xl gradient-text'>See How We have Transformed Visions into Success</p>
       </motion.p>
+      
       <motion.div
         ref={containerRef}
         className="projects-container"
