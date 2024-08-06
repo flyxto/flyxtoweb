@@ -48,94 +48,112 @@ const Techstack = () => {
   }, []);
 
   return (
-    <div className="grid md:grid-cols-2 grid-cols-1 md:pb-40 " ref={sectionRef}>
-      <div className='flex justify-center'>
-        <div className="circle2 md:scale-100 scale-75">
-          <div className='ray4'></div>
-          <div className="tech-icon react techlogos">
-            <div className='ray3'></div>
-            <motion.div variants={scaleUpVariants}
-              initial="hidden"
-              animate={isInView ? "visible" : "hidden"}
-              transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}>
-              <Image src={ReactLogo} alt="React" width={100} height={100} />
-            </motion.div>
-          </div>
-          <div className="tech-icon tailwind techlogos">
-            <div className='ray3'></div>
-            <motion.div variants={scaleUpVariants}
-              initial="hidden"
-              animate={isInView ? "visible" : "hidden"}
-              transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}>
-              <Image src={next} alt="Tailwind" width={100} height={100} />
-            </motion.div>
-          </div>
-          <div className="tech-icon wordpress techlogos">
-            <div className='ray3'></div>
-            <motion.div variants={scaleUpVariants}
-              initial="hidden"
-              animate={isInView ? "visible" : "hidden"}
-              transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}>
-              <Image src={django} alt="WordPress" width={100} height={100} />
-            </motion.div>
-          </div>
-          <div className="tech-icon mysql techlogos">
-            <div className='ray3'></div>
-            <motion.div variants={scaleUpVariants}
-              initial="hidden"
-              animate={isInView ? "visible" : "hidden"}
-              transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}>
-              <Image src={flutter} alt="MySQL" width={100} height={100} />
-            </motion.div>
-          </div>
-          <div className="tech-icon aws techlogos">
-            <div className='ray3'></div>
-            <motion.div variants={scaleUpVariants}
-              initial="hidden"
-              animate={isInView ? "visible" : "hidden"}
-              transition={{ duration: 0.8, ease: "easeOut", delay: 0.5 }}>
-              <Image src={node} alt="AWS" width={100} height={100} />
-            </motion.div>
-          </div>
-          <div className="tech-icon laravel techlogos">
-            <div className='ray3'></div>
-            <motion.div variants={scaleUpVariants}
-              initial="hidden"
-              animate={isInView ? "visible" : "hidden"}
-              transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}>
-              <Image src={springboot} alt="Laravel" width={100} height={100} />
-            </motion.div>
-          </div>
-          <div className="tech-icon middleIcon flex items-center justify-center">
-            <motion.div variants={scaleUpVariants}
-              initial="hidden"
-              animate={isInView ? "visible" : "hidden"}
-              transition={{ duration: 0.8, ease: "easeOut", delay: 0.7 }}>
-              <p className='text-xl text-center scale-150'>Technical Mastery</p>
-            </motion.div>
-          </div>
-        </div>
-      </div>
-      <div className='flex justify-center items-center md:overflow-visible overflow-hidden'>
+    <div className='' ref={sectionRef}>
+      <motion.div variants={moveUpVariants}
+        initial="hidden"
+        animate={isInView ? "visible" : "hidden"}
+        transition={{ duration: 1, ease: "easeOut", delay: 0.1 }} className=' pb-40'>
+        <p className='text-7xl text-center font-semibold gradient-text'>Concept to Engineering</p>
+      </motion.div>
+      <div className="grid md:grid-cols-2 grid-cols-1 md:pb-40 " >
         <motion.div variants={moveUpVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
-          transition={{ duration: 1, ease: "easeOut", delay: 0.8 }}>
-          <div className='rounded-2xl overflow-hidden shadow-2xl shadow-slate-600 md:scale-100 scale-50'>
-            <Vimeo
-              video="347119375"
-              autoplay
-              loop
-              width={600}
-              muted={false}
-              showPortrait
-              background
-              controls={false}
-            />
+          transition={{ duration: 1, ease: "easeOut", delay: 0.2 }} className='flex justify-center'>
+
+          <div className="circle2 md:scale-100 scale-75">
+            <div className='ray4'></div>
+            <div className="tech-icon react techlogos">
+              <div className='ray3'></div>
+              <motion.div variants={scaleUpVariants}
+                initial="hidden"
+                animate={isInView ? "visible" : "hidden"}
+                transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}>
+                <Image src={ReactLogo} alt="React" width={100} height={100} />
+              </motion.div>
+            </div>
+            <div className="tech-icon tailwind techlogos">
+              <div className='ray3'></div>
+              <motion.div variants={scaleUpVariants}
+                initial="hidden"
+                animate={isInView ? "visible" : "hidden"}
+                transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}>
+                <Image src={next} alt="Tailwind" width={100} height={100} />
+              </motion.div>
+            </div>
+            <div className="tech-icon wordpress techlogos">
+              <div className='ray3'></div>
+              <motion.div variants={scaleUpVariants}
+                initial="hidden"
+                animate={isInView ? "visible" : "hidden"}
+                transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}>
+                <Image src={django} alt="WordPress" width={100} height={100} />
+              </motion.div>
+            </div>
+            <div className="tech-icon mysql techlogos">
+              <div className='ray3'></div>
+              <motion.div variants={scaleUpVariants}
+                initial="hidden"
+                animate={isInView ? "visible" : "hidden"}
+                transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}>
+                <Image src={flutter} alt="MySQL" width={100} height={100} />
+              </motion.div>
+            </div>
+            <div className="tech-icon aws techlogos">
+              <div className='ray3'></div>
+              <motion.div variants={scaleUpVariants}
+                initial="hidden"
+                animate={isInView ? "visible" : "hidden"}
+                transition={{ duration: 0.8, ease: "easeOut", delay: 0.5 }}>
+                <Image src={node} alt="AWS" width={100} height={100} />
+              </motion.div>
+            </div>
+            <div className="tech-icon laravel techlogos">
+              <div className='ray3'></div>
+              <motion.div variants={scaleUpVariants}
+                initial="hidden"
+                animate={isInView ? "visible" : "hidden"}
+                transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}>
+                <Image src={springboot} alt="Laravel" width={100} height={100} />
+              </motion.div>
+            </div>
+            <div className="tech-icon middleIcon flex items-center justify-center">
+              <motion.div variants={scaleUpVariants}
+                initial="hidden"
+                animate={isInView ? "visible" : "hidden"}
+                transition={{ duration: 0.8, ease: "easeOut", delay: 0.7 }}>
+                <p className='text-xl text-center scale-150'>Technical Mastery</p>
+              </motion.div>
+            </div>
           </div>
         </motion.div>
+        <div className='flex flex-col justify-center items-center md:overflow-visible overflow-hidden  mt-[-100px]'>
+          <motion.div variants={moveUpVariants}
+            initial="hidden"
+            animate={isInView ? "visible" : "hidden"}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}>
+            <p className='text-3xl gradient-text'>Until Your Idea Becomes a Product</p>
+          </motion.div>
+          <motion.div variants={moveUpVariants}
+            initial="hidden"
+            animate={isInView ? "visible" : "hidden"}
+            transition={{ duration: 1, ease: "easeOut", delay: 0.9 }}>
+            <div className='rounded-2xl mt-5 overflow-hidden shadow-2xl shadow-slate-600 md:scale-100 scale-50'>
+              <Vimeo
+                video="347119375"
+                autoplay={false}
+                loop
+                width={600}
+                muted={false}
+                showPortrait
+                background
+                controls={true}
+              />
+            </div>
+          </motion.div>
+        </div>
       </div>
-    </div>
+    </div >
   );
 }
 
