@@ -102,6 +102,47 @@ body{
   padding-right: 40px;
 }
 
+/* styles/globals.css */
+
+/* styles/globals.css */
+
+/* styles/globals.css */
+
+html {
+  font-size: 100%; /* Default font size */
+}
+
+@media screen and (max-width: 1440px) {
+  html {
+    font-size: 80%; /* Scale down to 80% */
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  html {
+    font-size: 70%; /* Scale down to 70% */
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  html {
+    font-size: 60%; /* Scale down to 60% */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 50%; /* Scale down to 50% */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  html {
+    font-size: 100%; /* Scale down to 40% */
+  }
+}
+
+
 /* Example for other components */
 .other-component {
   position: relative;
@@ -120,6 +161,7 @@ body{
   .container-styles {
     padding-left: 10px;
     padding-right: 10px;
+    
   }
 }
 
