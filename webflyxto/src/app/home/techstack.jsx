@@ -55,9 +55,9 @@ const Techstack = () => {
         <motion.div variants={moveUpVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
-          transition={{ duration: 1, ease: "easeOut", delay: 0.1 }} className=' pb-40'>
+          transition={{ duration: 1, ease: "easeOut", delay: 0.1 }} className=' pb-32'>
           <p className='text-7xl text-center font-semibold gradient-text'>Concept to Engineering</p>
-
+          <p className='text-center text-xl gradient-text'>From concept to engineering, we turn your idea into a great product</p>
         </motion.div>
         <div className="grid md:grid-cols-2 grid-cols-1 md:pb-40 " >
           <motion.div variants={moveUpVariants}

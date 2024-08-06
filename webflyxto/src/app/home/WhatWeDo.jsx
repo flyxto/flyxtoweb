@@ -58,12 +58,13 @@ const WhatWeDo = () => {
   return (
     <div className='flex-col justify-center mt-40 mb-40'>
       <motion.p
-        className='text-center gradient-text text-7xl mb-40 font-semibold'
+        className='text-center gradient-text text-7xl mb-24 font-semibold'
         variants={textVariants}
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
       >
         What We Build
+        <p className='text-center text-xl gradient-text'>Providing a Comprehensive Suite of Services</p>
       </motion.p>
       <motion.div
         ref={containerRef}
