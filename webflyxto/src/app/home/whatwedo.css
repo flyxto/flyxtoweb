@@ -6,7 +6,7 @@
   border: solid 0px #202221;
   background-size: 20px 20px;
   /* background: radial-gradient(circle 280px at 100% 0%, #ff2f2f, #3a0022); */
-  background: #7e002299;
+  background: #97102b99;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -15,12 +15,12 @@
   color: #fff;
   overflow: hidden;
   transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  box-shadow: 0 0 10px rgba(129, 129, 129, 0.5);
+  /* box-shadow: 0 0 10px rgba(129, 129, 129, 0.5); */
 }
 
 .card2:hover {
   background: radial-gradient(circle 280px at 75% 0%, #a4012f99, #6200006d);
-  box-shadow: 0 0 20px rgba(129, 129, 129, 0.9);
+  /* box-shadow: 0 0 20px rgba(129, 129, 129, 0.9); */
 }
 
 .card2 .text2 {
