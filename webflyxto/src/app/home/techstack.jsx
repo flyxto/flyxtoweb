@@ -172,7 +172,7 @@ const Techstack = () => {
 
               </div>
             </motion.div>
-            <p className='text-lg gradient-text text-justify'>We specialize in transforming your concept from an initial idea to a fully realized, exceptional product. Leveraging our wide range of experience and expertise, we guide you through every step of the process. From concept development and design to engineering and implementation, our dedicated team ensures that your vision becomes a reality. We are committed to delivering innovative solutions that meet your unique needs, combining creativity and technical excellence to bring your ideas to life</p>
+            <p className='text-lg text-justify'>We specialize in transforming your concept from an initial idea to a fully realized, exceptional product. Leveraging our wide range of experience and expertise, we guide you through every step of the process. From concept development and design to engineering and implementation, our dedicated team ensures that your vision becomes a reality. We are committed to delivering innovative solutions that meet your unique needs, combining creativity and technical excellence to bring your ideas to life</p>
           </div>
 
         </div>
