@@ -75,7 +75,7 @@ const Navbar2 = () => {
             <div className={`flex-col z-20 flex-wrap gap-6 p-8 rounded-3xl justify-end w-full invisible opacity-0 translate-y-1 absolute top-full left-0 transition-all duration-300 scale-95 origin-top lg:relative lg:scale-100 lg:peer-checked:translate-y-0 lg:translate-y-0 lg:flex lg:flex-row lg:items-center lg:gap-0 lg:p-0 lg:bg-transparent lg:w-auto lg:visible lg:opacity-100 lg:border-none peer-checked:scale-100 peer-checked:opacity-100 peer-checked:visible lg:shadow-none dark:shadow-none ${styles.navLinks}`}>
               <div className="text-gray-100 dark:text-gray-200 lg:pr-4 lg:w-auto w-full lg:pt-0">
                 <ul className="items-center tracking-wide font-medium lg:text-sm flex-col flex lg:flex-row gap-6 lg:gap-0">
-                  {['Home', 'About', 'Team', 'Contact', 'Quick Schedule'].map((text, index) => (
+                  {['Home', 'About', 'Careers', 'Contact', 'Quick Schedule'].map((text, index) => (
                     <li key={text} ref={(el) => (linkRefs.current[index] = el)} className={styles.navLink}>
                       {text === 'Quick Schedule' ? (
                         <a href="#" onClick={handleCalendlyClick} className="block md:px-4 transition hover:text-gray-400">
