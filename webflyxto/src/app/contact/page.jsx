@@ -80,7 +80,7 @@ const Contact = () => {
               transition={{ duration: 1, delay: 0.5 }} // Add a delay here
             >
               <p className='text-5xl font-semibold gradient-text text-center'>Get in touch</p>
-              <div className='w-96 p-6 mt-3 bg-black/50 backdrop-blur-sm rounded-lg shadow-lg'>
+              <div className='w-96 p-8 mt-3 bg-black/50 backdrop-blur-sm rounded-lg shadow-lg'>
                 <form onSubmit={handleSubmit}>
                   <div className='mt-4'>
                     <label htmlFor="name" className='block text-sm font-medium '>Your Name :</label>
@@ -124,9 +124,10 @@ const Contact = () => {
                   </div>
                   {formStatus && <p className='mt-4 text-sm text-gray-600'>{formStatus}</p>}
                 </form>
+                <p className='text-lg font-semibold text-center mt-4'>or Email us at<a href="mailto:hello@flyxto.com"> hello@flyxto.com</a></p>
               </div>
 
-              <p className='text-xl font-semibold text-center mt-2'>or Email us at<a href="mailto:hello@flyxto.com"> hello@flyxto.com</a></p>
+              
 
             </motion.div>
           </div>
