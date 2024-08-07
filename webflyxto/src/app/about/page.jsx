@@ -25,17 +25,17 @@ const fadeIn = {
 
 const Avatars = () => {
   const avatars = [
-    { src: yasanthpfp, top: '2vh', left: '10vw', delay: 0, duration: 1 },
-    { src: kisalpfp, top: '50vh', left: '10vw', delay: 0.5, duration: 1 },
-    { src: sannapfp, top: '30vh', left: '24vw', delay: 1, duration: 1 },
-    { src: kisalpfp, top: '10vh', left: '44vw', delay: 1.5, duration: 1 },
-    { src: sudarapfp, top: '50vh', left: '60vw', delay: 2, duration: 1 },
-    { src: yasanthpfp, top: '70vh', left: '14vw', delay: 2.5, duration: 1 },
-    { src: sannapfp, top: '80vh', left: '35vw', delay: 3, duration: 1 },
-    { src: janindupfp, top: '28vh', left: '60vw', delay: 3.5, duration: 1 },
-    { src: janindupfp, top: '75vh', left: '60vw', delay: 4, duration: 1 }
-  ];
+    { src: '/about-images/yasanth.jpg', top: '2vh', left: '10vw', duration: '3s', delay: '0s', translateY: '20px' },
+    { src: '/about-images/Kisal.jpg', top: '50vh', left: '10vw', duration: '4s', delay: '1s', translateY: '15px' },
+    { src: '/about-images/Sanna.jpg', top: '30vh', left: '24vw', duration: '4s', delay: '1s', translateY: '15px' },
+    { src: '/about-images/Kisal.jpg', top: '10vh', left: '44vw', duration: '4s', delay: '1s', translateY: '15px' },
+    { src: '/about-images/Sudara.jpg', top: '50vh', left: '60vw', duration: '2.5s', delay: '0.5s', translateY: '25px' },
+    { src: '/about-images/yasanth.jpg', top: '70vh', left: '14vw', duration: '3.5s', delay: '1.2s', translateY: '30px' },
+    { src: '/about-images/Sanna.jpg', top: '80vh', left: '35vw', duration: '3.5s', delay: '1.2s', translateY: '30px' },
+    { src: '/about-images/Janindu.jpg', top: '28vh', left: '68vw', duration: '4.5s', delay: '0.8s', translateY: '18px' },
+    { src: '/about-images/Janindu.jpg', top: '75vh', left: '60vw', duration: '4.5s', delay: '0.8s', translateY: '18px' }
 
+  ];
   return (
     <div className='relative '>
       <motion.div
@@ -108,27 +108,25 @@ const Avatars = () => {
           >
             <p className='text-center text-4xl font-semibold gradient-text'>Leadership Team</p>
             <div className='relative'>
-
               <div className={styles.container}>
                 {avatars.map((avatar, index) => (
-                  <motion.div
+                  <div
                     key={index}
-                    initial="hidden"
-                    animate="visible"
-                    custom={{ delay: avatar.delay, duration: avatar.duration }}
-                    variants={fadeIn}
                     className={styles.avatar}
                     style={{
                       top: avatar.top,
                       left: avatar.left,
+                      '--duration': avatar.duration,
+                      '--delay': avatar.delay,
+                      '--translateY': avatar.translateY
                     }}
                   >
-                    <Image className='' src={avatar.src} alt={`Avatar ${index + 1}`} />
-                  </motion.div>
+                    <img className='' src={avatar.src} alt={`Avatar ${index + 1}`} />
+                  </div>
                 ))}
-
               </div>
             </div>
+
           </motion.div>
 
           <motion.div
