@@ -39,7 +39,7 @@ const Header = () => {
             transition={{ duration: 1, delay: 0.7 }}
           >
             <div>
-             
+
               <motion.div
                 className="gradient-text md:text-6xl font-medium text-3xl text-center"
                 initial={{ opacity: 0, y: 20 }}
@@ -65,13 +65,15 @@ const Header = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 1.3 }}
           >
-            <button className="button md:scale-100 scale-90">
-              <div className="blob1"></div>
-              <div className="blob2"></div>
-              <div className="inner ">
-                <p className="px-4 text-lg">Schedule a Meeting</p>
-              </div>
-            </button>
+            <a href="/contact">
+              <button className="button md:scale-100 scale-90">
+                <div className="blob1"></div>
+                <div className="blob2"></div>
+                <div className="inner ">
+                  <p className="px-4 text-lg">Schedule a Meeting</p>
+                </div>
+              </button>
+            </a>
           </motion.div>
           <motion.div
             className="md:pt-36 pt-20"
