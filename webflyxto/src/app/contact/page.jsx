@@ -61,7 +61,7 @@ const Contact = () => {
       >
         <Image
           src={banner}
-          className='brightness-[50%]'
+          className='brightness-[80%]'
           objectFit='cover'
           alt='Background Banner'
         />
@@ -80,7 +80,7 @@ const Contact = () => {
               transition={{ duration: 1, delay: 0.5 }} // Add a delay here
             >
               <p className='text-5xl font-semibold gradient-text text-center'>Get in touch</p>
-              <div className='w-96 p-6 mt-3 bg-white/20 backdrop-blur-sm rounded-lg shadow-lg'>
+              <div className='w-96 p-6 mt-3 bg-black/50 backdrop-blur-sm rounded-lg shadow-lg'>
                 <form onSubmit={handleSubmit}>
                   <div className='mt-4'>
                     <label htmlFor="name" className='block text-sm font-medium '>Your Name :</label>
