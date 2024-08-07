@@ -1,5 +1,4 @@
 "use client";
-// components/Header.js
 import React, { useEffect, useRef } from 'react';
 import Image from "next/image";
 import Logo from '@/assets/logo.png';
@@ -27,6 +26,34 @@ const Navbar2 = () => {
     });
   }, []);
 
+  useEffect(() => {
+    // Dynamically load Calendly CSS and JS
+    const link = document.createElement('link');
+    link.href = 'https://assets.calendly.com/assets/external/widget.css';
+    link.rel = 'stylesheet';
+    document.head.appendChild(link);
+
+    const script = document.createElement('script');
+    script.src = 'https://assets.calendly.com/assets/external/widget.js';
+    script.type = 'text/javascript';
+    script.async = true;
+    document.body.appendChild(script);
+
+    return () => {
+      document.head.removeChild(link);
+      document.body.removeChild(script);
+    };
+  }, []);
+
+  const handleCalendlyClick = (e) => {
+    e.preventDefault();
+    if (window.Calendly) {
+      window.Calendly.initPopupWidget({
+        url: 'https://calendly.com/flystudioslk/30min'
+      });
+    }
+  };
+
   return (
     <header className={`sticky md:top-5 top-0 z-50 ${styles.header}`}>
       <nav className="z-10 w-full">
@@ -38,7 +65,7 @@ const Navbar2 = () => {
                 <Image src={Logo} width={120} height={160} alt="BCMU" className="scale-75 md:scale-90" />
               </a>
               <div className="relative flex items-center lg:hidden max-h-10">
-                <label role="button" htmlFor="toggle_nav" aria-label="humburger" id="hamburger" className="relative p-6 -mr-0">
+                <label role="button" htmlFor="toggle_nav" aria-label="hamburger" id="hamburger" className="relative p-6 -mr-0">
                   <div aria-hidden="true" id="line" className="m-auto h-0.5 w-5 rounded bg-gray-300 transition duration-300"></div>
                   <div aria-hidden="true" id="line2" className="m-auto mt-2 h-0.5 w-5 rounded bg-gray-300 transition duration-300"></div>
                 </label>
@@ -50,9 +77,15 @@ const Navbar2 = () => {
                 <ul className="items-center tracking-wide font-medium lg:text-sm flex-col flex lg:flex-row gap-6 lg:gap-0">
                   {['Home', 'About', 'Team', 'Contact', 'Quick Schedule'].map((text, index) => (
                     <li key={text} ref={(el) => (linkRefs.current[index] = el)} className={styles.navLink}>
-                      <a href={`/${text.toLowerCase().replace(' ', '')}`} className="block md:px-4 transition hover:text-gray-400">
-                        {text === 'Quick Schedule' ? <Button className="rounded-full bg-white/20">{text}</Button> : <span>{text}</span>}
-                      </a>
+                      {text === 'Quick Schedule' ? (
+                        <a href="#" onClick={handleCalendlyClick} className="block md:px-4 transition hover:text-gray-400">
+                          <Button className="rounded-full bg-white/20">{text}</Button>
+                        </a>
+                      ) : (
+                        <a href={`/${text.toLowerCase().replace(' ', '')}`} className="block md:px-4 transition hover:text-gray-400">
+                          {text}
+                        </a>
+                      )}
                     </li>
                   ))}
                 </ul>
